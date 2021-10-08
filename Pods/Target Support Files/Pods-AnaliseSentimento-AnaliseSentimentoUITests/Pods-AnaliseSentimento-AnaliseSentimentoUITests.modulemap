@@ -1,0 +1,6 @@
+framework module Pods_AnaliseSentimento_AnaliseSentimentoUITests {
+  umbrella header "Pods-AnaliseSentimento-AnaliseSentimentoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
