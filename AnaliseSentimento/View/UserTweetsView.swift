@@ -1,5 +1,3 @@
-// NLTagger
-
 import SwiftUI
 
 struct UserTweetsView: View {
@@ -7,10 +5,14 @@ struct UserTweetsView: View {
     
     var body: some View {
         List(tweetsViewModel.userTweets) { tweet in
-            Text(tweet.text)
+            HStack {
+                Text(tweet.text)
+                Spacer()
+                Text(String(tweet.getSentimentScore()))
+            }
         }
         .onAppear {
-            tweetsViewModel.getTweetsFromUser("EstudanteRata")
+            tweetsViewModel.getTweetsFromUser("Cristiano")
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4942352F2711DBB20068B345 /* TweeterRootData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942352E2711DBB20068B345 /* TweeterRootData.swift */; };
 		49F6CBF027106DBB00F737B5 /* AnaliseSentimentoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CBEF27106DBB00F737B5 /* AnaliseSentimentoApp.swift */; };
 		49F6CBF227106DBB00F737B5 /* UserTweetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CBF127106DBB00F737B5 /* UserTweetsView.swift */; };
 		49F6CBF427106DBC00F737B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F6CBF327106DBC00F737B5 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		094F3D9D64B7B8432B6D6A14 /* Pods-AnaliseSentimento.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnaliseSentimento.debug.xcconfig"; path = "Target Support Files/Pods-AnaliseSentimento/Pods-AnaliseSentimento.debug.xcconfig"; sourceTree = "<group>"; };
 		0E6E497DC5386CDD99E96C81 /* Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AnaliseSentimento-AnaliseSentimentoUITests/Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		154BEBE132158187202AFD37 /* Pods_AnaliseSentimentoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnaliseSentimentoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4942352E2711DBB20068B345 /* TweeterRootData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweeterRootData.swift; sourceTree = "<group>"; };
 		49F6CBEC27106DBB00F737B5 /* AnaliseSentimento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnaliseSentimento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F6CBEF27106DBB00F737B5 /* AnaliseSentimentoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseSentimentoApp.swift; sourceTree = "<group>"; };
 		49F6CBF127106DBB00F737B5 /* UserTweetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTweetsView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				49F6CC23271105C300F737B5 /* UserTweet.swift */,
+				4942352E2711DBB20068B345 /* TweeterRootData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				49F6CC282711119700F737B5 /* TweetsViewModel.swift in Sources */,
 				49F6CC24271105C300F737B5 /* UserTweet.swift in Sources */,
 				49F6CC2B2711140A00F737B5 /* TweetsEndpoint.swift in Sources */,
+				4942352F2711DBB20068B345 /* TweeterRootData.swift in Sources */,
 				49F6CC1B2710732200F737B5 /* TweetsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
