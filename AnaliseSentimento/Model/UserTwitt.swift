@@ -1,12 +1,12 @@
 import Foundation
 import NaturalLanguage
 
-struct UserTweet: Decodable, Identifiable {
+struct UserTwitt: Decodable, Identifiable {
     let id: String
     let text: String
 }
 
-extension UserTweet {
+extension UserTwitt {
     func getSentimentScore() -> String {
         let tagger = NLTagger(tagSchemes: [.sentimentScore])
         tagger.string = self.text

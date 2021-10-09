@@ -2,11 +2,11 @@ import SwiftUI
 
 @main
 struct AnaliseSentimentoApp: App {
-    @StateObject var tweetsViewModel = TweetsViewModel()
+    @StateObject var tweetsViewModel = TwittsViewModel()
     
     var body: some Scene {
         WindowGroup {
-            UserTweetsView(tweetsViewModel: tweetsViewModel)
+            UserTwittsView(twittsViewModel: tweetsViewModel)
         }
     }
 }

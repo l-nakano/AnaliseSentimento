@@ -1,9 +1,9 @@
 import Alamofire
 import Foundation
 
-final class TweetsService {
-    func fetchUserTweetsFrom(user: String, completion: @escaping ([UserTweet]) -> Void) {
-        let endpoint = TweetsEndpoint.fromUser(user)
+final class UserService {
+    func fetchUser(_ user: String, completion: @escaping ([UserTwitt]) -> Void) {
+        let endpoint = TwittsEndpoint.fromUser(user)
         let url = endpoint.url
         let headers = endpoint.headers
         AF.request(url, headers: headers)
@@ -11,12 +11,12 @@ final class TweetsService {
             .responseData { response in
                 switch response.result {
                 case .success:
-                    print("Fetch Tweets Validation Successful")
+                    print("Fetch User Validation Successful")
                 case let .failure(error):
-                    print("Error Fetching Tweets: \(error)")
+                    print("Error Fetching User: \(error)")
                 }
             }
-            .responseDecodable(of: RootResponse.self, queue: .main) { response in
+            .responseDecodable(of: TwittRootResponse.self, queue: .main) { response in
                 guard let userTweets = response.value else { return }
                 completion(userTweets.data)
             }
