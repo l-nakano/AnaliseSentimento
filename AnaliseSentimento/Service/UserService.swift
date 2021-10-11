@@ -1,5 +1,5 @@
 import Alamofire
-import Foundation
+import SwiftUI
 
 final class UserService {
     func fetchUser(_ user: String, completion: @escaping (TwitterUser, [UserFetchErrors]) -> Void) {
@@ -17,9 +17,9 @@ final class UserService {
                 }
             }
             .responseDecodable(of: UserRootResponse.self, queue: .main) { response in
-                guard let twitterUser = response.value else { return }
-                if twitterUser.data == nil {
-                    print(twitterUser.errors!.first!.detail)
+                guard let twitterUser = response.value, twitterUser.errors == nil else {
+                    print("Error fetching Twitter user")
+                    return
                 }
                 completion(twitterUser.data ?? TwitterUser(), twitterUser.errors ?? [UserFetchErrors()])
             }

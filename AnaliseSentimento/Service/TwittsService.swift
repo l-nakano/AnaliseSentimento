@@ -21,4 +21,18 @@ final class TwittsService {
                 completion(userTwitts.data)
             }
     }
+    
+    func getUserProfileImage(from url: String, completion: @escaping (Data?) -> ()) {
+        AF.request(url)
+            .validate()
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    print("Fetch Profile Image Validation Successful")
+                    completion(response.data)
+                case let .failure(error):
+                    print("Error Fetching Profile Image: \(error)")
+                }
+            }
+    }
 }
