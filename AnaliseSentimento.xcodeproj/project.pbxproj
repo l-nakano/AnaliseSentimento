@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49336FC22714AA6200FCBB8B /* UsernameValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49336FC12714AA6200FCBB8B /* UsernameValidation.swift */; };
 		4942352F2711DBB20068B345 /* TwittsRootData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942352E2711DBB20068B345 /* TwittsRootData.swift */; };
 		494235312711E4390068B345 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494235302711E4390068B345 /* UserService.swift */; };
 		494235332711E4980068B345 /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494235322711E4980068B345 /* UserEndpoint.swift */; };
@@ -51,6 +52,7 @@
 		094F3D9D64B7B8432B6D6A14 /* Pods-AnaliseSentimento.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnaliseSentimento.debug.xcconfig"; path = "Target Support Files/Pods-AnaliseSentimento/Pods-AnaliseSentimento.debug.xcconfig"; sourceTree = "<group>"; };
 		0E6E497DC5386CDD99E96C81 /* Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AnaliseSentimento-AnaliseSentimentoUITests/Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		154BEBE132158187202AFD37 /* Pods_AnaliseSentimentoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnaliseSentimentoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49336FC12714AA6200FCBB8B /* UsernameValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidation.swift; sourceTree = "<group>"; };
 		4942352E2711DBB20068B345 /* TwittsRootData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwittsRootData.swift; sourceTree = "<group>"; };
 		494235302711E4390068B345 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		494235322711E4980068B345 /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				4942352E2711DBB20068B345 /* TwittsRootData.swift */,
 				494235362711E91C0068B345 /* TwitterUser.swift */,
 				494235382711E9260068B345 /* UserRootData.swift */,
+				49336FC12714AA6200FCBB8B /* UsernameValidation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				494235372711E91C0068B345 /* TwitterUser.swift in Sources */,
 				497938302713BC8000FAC870 /* UserViewModel.swift in Sources */,
 				494235392711E9260068B345 /* UserRootData.swift in Sources */,
+				49336FC22714AA6200FCBB8B /* UsernameValidation.swift in Sources */,
 				49F6CBF227106DBB00F737B5 /* UserTwittsView.swift in Sources */,
 				49F6CBF027106DBB00F737B5 /* AnaliseSentimentoApp.swift in Sources */,
 				49F6CC282711119700F737B5 /* TwittsViewModel.swift in Sources */,

@@ -8,6 +8,7 @@ struct FindUserView: View {
     @State private var user = ""
     @State private var showingUserTwitts = false
     @State private var showingAlert = false
+    @State private var alertMessage = ""
     
     var body: some View {
         Color.init(UIColor(named: "FindUserColor")!)
@@ -25,8 +26,8 @@ struct FindUserView: View {
         }
         .frame(width: UIScreen.main.bounds.width * 0.9)
         .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Usuário não encontrado!"),
-                  message: Text("O nome \(user) não é um usuário do Twitter"),
+            Alert(title: Text("Usuário não encontrado ou inválido!"),
+                  message: Text(alertMessage),
                   dismissButton: .default(Text("Ok"), action: { user = "" }))
         }
     }
@@ -47,7 +48,7 @@ struct FindUserView: View {
     }
     
     var searchField: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 0) {
             Spacer()
             HStack {
                 TextField("Digite o nome do usuário", text: $user)
@@ -55,7 +56,7 @@ struct FindUserView: View {
                     .background(Color.white)
                     .cornerRadius(10)
                     .onReceive(user.publisher.collect()) {
-                        self.user = String($0.prefix(15))
+                        self.user = String($0.prefix(UsernameValidation().maxChars))
                     }
                 Button(action: {
                     verifyTwitterUser()
@@ -65,18 +66,26 @@ struct FindUserView: View {
                         .foregroundColor(.primary)
                 })
             }
+            Text("Exemplo: Cristiano")
+                .font(.footnote)
             Spacer()
         }
     }
     
     func verifyTwitterUser() {
-        userViewModel.getTwitterUser(user) { foundUser in
-            if foundUser {
-                twittsViewModel.updateTwitterUser(userViewModel.twitterUser)
-                showingUserTwitts.toggle()
-            }
-            else {
-                showingAlert.toggle()
+        if user.contains(where: { !UsernameValidation().allowedChars.contains($0) }) {
+            alertMessage = "O nome do usuário contém caracteres inválidos.\nCaracteres válidos: A-Z, a-z, 0-9, _"
+            showingAlert.toggle()
+        } else {
+            userViewModel.getTwitterUser(user) { foundUser in
+                if foundUser {
+                    twittsViewModel.updateTwitterUser(userViewModel.twitterUser)
+                    showingUserTwitts.toggle()
+                }
+                else {
+                    alertMessage = "O nome \(user) não é um usuário do Twitter"
+                    showingAlert.toggle()
+                }
             }
         }
     }

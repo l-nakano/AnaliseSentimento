@@ -15,7 +15,7 @@ extension TwittsEndpoint {
     }
     
     var headers: HTTPHeaders {
-        return ["Authorization": "Bearer AAAAAAAAAAAAAAAAAAAAAOv1UQEAAAAA3MLr1C7mtA7pquHZJnk5mGLWXug%3DelLUznFpVNW7BuuSBLuODqmO1DFrlCq8eYWj56i5zvGd6E9fLu"]
+        return ["Authorization": ProcessInfo.processInfo.environment["BEARER_TOKEN"]!]
     }
     
     static func fromUser(_ user: String) -> Self {
