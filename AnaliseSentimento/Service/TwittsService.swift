@@ -3,7 +3,7 @@ import Foundation
 
 final class TwittsService {
     func fetchUserTwittsFrom(user: String, completion: @escaping ([UserTwitt]) -> Void) {
-        let endpoint = UserEndpoint.fromUser(user, createdAt: true, location: true ,description: true)
+        let endpoint = TwittsEndpoint.fromUser(user)
         let url = endpoint.url
         let headers = endpoint.headers
         AF.request(url, headers: headers)

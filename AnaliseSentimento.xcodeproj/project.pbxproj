@@ -12,6 +12,8 @@
 		494235332711E4980068B345 /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494235322711E4980068B345 /* UserEndpoint.swift */; };
 		494235372711E91C0068B345 /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494235362711E91C0068B345 /* TwitterUser.swift */; };
 		494235392711E9260068B345 /* UserRootData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494235382711E9260068B345 /* UserRootData.swift */; };
+		497938302713BC8000FAC870 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4979382F2713BC8000FAC870 /* UserViewModel.swift */; };
+		497938322713C54C00FAC870 /* FindUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497938312713C54C00FAC870 /* FindUserView.swift */; };
 		49F6CBF027106DBB00F737B5 /* AnaliseSentimentoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CBEF27106DBB00F737B5 /* AnaliseSentimentoApp.swift */; };
 		49F6CBF227106DBB00F737B5 /* UserTwittsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CBF127106DBB00F737B5 /* UserTwittsView.swift */; };
 		49F6CBF427106DBC00F737B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F6CBF327106DBC00F737B5 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		494235322711E4980068B345 /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
 		494235362711E91C0068B345 /* TwitterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
 		494235382711E9260068B345 /* UserRootData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRootData.swift; sourceTree = "<group>"; };
+		4979382F2713BC8000FAC870 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		497938312713C54C00FAC870 /* FindUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindUserView.swift; sourceTree = "<group>"; };
 		49F6CBEC27106DBB00F737B5 /* AnaliseSentimento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnaliseSentimento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F6CBEF27106DBB00F737B5 /* AnaliseSentimentoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseSentimentoApp.swift; sourceTree = "<group>"; };
 		49F6CBF127106DBB00F737B5 /* UserTwittsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTwittsView.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				49F6CC272711119700F737B5 /* TwittsViewModel.swift */,
+				4979382F2713BC8000FAC870 /* UserViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				49F6CBF127106DBB00F737B5 /* UserTwittsView.swift */,
+				497938312713C54C00FAC870 /* FindUserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,7 +486,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497938322713C54C00FAC870 /* FindUserView.swift in Sources */,
 				494235372711E91C0068B345 /* TwitterUser.swift in Sources */,
+				497938302713BC8000FAC870 /* UserViewModel.swift in Sources */,
 				494235392711E9260068B345 /* UserRootData.swift in Sources */,
 				49F6CBF227106DBB00F737B5 /* UserTwittsView.swift in Sources */,
 				49F6CBF027106DBB00F737B5 /* AnaliseSentimentoApp.swift in Sources */,
