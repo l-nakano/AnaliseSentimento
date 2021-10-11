@@ -1,7 +1,7 @@
 import Foundation
 
-struct RootResponse: Decodable {
-    let data: [UserTweet]
+struct TwittRootResponse: Decodable {
+    let data: [UserTwitt]
     let meta: MetaData
 }
 

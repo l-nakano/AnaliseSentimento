@@ -1,7 +1,7 @@
 import Foundation
 import Alamofire
 
-struct TweetsEndpoint {
+struct TwittsEndpoint {
     private var scheme: String = "https"
     private var host: String = "api.twitter.com/2"
     private var path: String = "/tweets/search/recent"
@@ -9,7 +9,7 @@ struct TweetsEndpoint {
     private var queryItems: String
 }
 
-extension TweetsEndpoint {
+extension TwittsEndpoint {
     var url: String {
         return scheme + "://" + host + path + query + queryItems.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
@@ -19,6 +19,6 @@ extension TweetsEndpoint {
     }
     
     static func fromUser(_ user: String) -> Self {
-        return TweetsEndpoint(queryItems: "from:\(user)")
+        return TwittsEndpoint(queryItems: "from:\(user)")
     }
 }
