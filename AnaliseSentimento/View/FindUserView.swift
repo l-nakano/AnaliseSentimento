@@ -10,17 +10,14 @@ struct FindUserView: View {
     @State private var showingAlert = false
     
     var body: some View {
-        NavigationView {
-            VStack {
-                TextField("Digite o usuário", text: $user)
-                Button(action: {
-                    verifyTwitterUser()
-                },
-                       label: { Text("Procurar") })
-            }
+        VStack {
+            title
+            description
+            searchField
         }.sheet(isPresented: $showingUserTwitts) {
             UserTwittsView(twittsViewModel: twittsViewModel)
         }
+        .frame(width: UIScreen.main.bounds.width * 0.9)
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("Usuário não encontrado!"),
                   message: Text("O nome \(user) não é um usuário do Twitter."),
@@ -28,10 +25,42 @@ struct FindUserView: View {
         }
     }
     
+    var title: some View {
+        Text("Sentimômetro")
+            .font(.largeTitle)
+            .bold()
+            .foregroundColor(.primary)
+            .padding([.top, .bottom], 100)
+    }
+    
+    var description: some View {
+        Text("Descubra qual o sentimento dos posts dos usuário do Twitter")
+            .font(.title3)
+            .italic()
+            .multilineTextAlignment(.center)
+    }
+    
+    var searchField: some View {
+        VStack {
+            Spacer()
+            HStack {
+                TextField("Digite o nome do usuário", text: $user)
+                Button(action: {
+                    verifyTwitterUser()
+                },
+                       label: {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.primary)
+                })
+            }
+            Spacer()
+        }
+    }
+    
     func verifyTwitterUser() {
         userViewModel.getTwitterUser(user) { foundUser in
             if foundUser {
-                twittsViewModel.twitterUser = userViewModel.twitterUser
+                twittsViewModel.updateTwitterUser(userViewModel.twitterUser)
                 showingUserTwitts.toggle()
             }
             else {
