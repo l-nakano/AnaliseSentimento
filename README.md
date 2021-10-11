@@ -23,4 +23,5 @@ Composto pelas classes que realizam a comunicação entre o modelo e a respectiv
 Ainda existem outros arquivos de suporte, utilizados para extração dos dados da API. Eles conectam o app com os serviços de posts e de usuários (Services), bem como contém informações sobre os caminhos da API (Endpoints).
 
 ## Análise de Sentimentos
-Para realizar a análise de sentimento dos posts do usuário selecionado, foi utilizada o framework Natural Language da Apple, por meio da classe NLTagger. O esquema de "sentiment score" foi utilizado para analisar a nota de um determinado texto, o que irá retornar um valor entre -1 e 1 (sendo -1 muito negativo e 1 muito positivo).
+Para realizar a análise de sentimento dos posts do usuário selecionado, foi utilizada o framework Natural Language da Apple, por meio da classe NLTagger (https://developer.apple.com/documentation/naturallanguage/nltagger).
+O esquema de "sentiment score" foi utilizado para analisar a nota de um determinado texto, o que irá retornar um valor entre -1 e 1 (sendo -1 muito negativo e 1 muito positivo).
