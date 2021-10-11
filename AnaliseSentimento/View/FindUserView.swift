@@ -10,6 +10,12 @@ struct FindUserView: View {
     @State private var showingAlert = false
     
     var body: some View {
+        Color.init(UIColor(named: "FindUserColor")!)
+            .ignoresSafeArea()
+            .overlay(entireView)
+    }
+    
+    var entireView: some View {
         VStack {
             title
             description
@@ -20,7 +26,7 @@ struct FindUserView: View {
         .frame(width: UIScreen.main.bounds.width * 0.9)
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("Usuário não encontrado!"),
-                  message: Text("O nome \(user) não é um usuário do Twitter."),
+                  message: Text("O nome \(user) não é um usuário do Twitter"),
                   dismissButton: .default(Text("Ok"), action: { user = "" }))
         }
     }
@@ -45,6 +51,12 @@ struct FindUserView: View {
             Spacer()
             HStack {
                 TextField("Digite o nome do usuário", text: $user)
+                    .padding(5)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .onReceive(user.publisher.collect()) {
+                        self.user = String($0.prefix(15))
+                    }
                 Button(action: {
                     verifyTwitterUser()
                 },

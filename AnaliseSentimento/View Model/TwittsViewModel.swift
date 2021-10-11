@@ -9,8 +9,7 @@ final class TwittsViewModel: ObservableObject {
     private var twittsService = TwittsService()
     
     init() {
-//        userTwitts = []
-        userTwitts = [UserTwitt(id: "101010", text: "Twitt de teste")]
+        userTwitts = []
         twitterUser = TwitterUser()
     }
     

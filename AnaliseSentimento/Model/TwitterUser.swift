@@ -21,20 +21,13 @@ struct TwitterUser: Decodable, Equatable {
     let description: String?
     
     init() {
-//        createdAt = ""
-//        profileImageUrl = ""
-//        name = ""
-//        location = ""
-//        username = ""
-//        id = ""
-//        description = ""
-        createdAt = "2016-04-14T10:44:00.000Z"
-        profileImageUrl = "https://pbs.twimg.com/profile_images/1423369382533767172/EmnfGzBC_normal.jpg"
-        name = "MeuNome"
-        location = "Brasil"
-        username = "MeuNome"
-        id = "10548796"
-        description = "Nenhuma"
+        createdAt = ""
+        profileImageUrl = ""
+        name = ""
+        location = ""
+        username = ""
+        id = ""
+        description = ""
     }
 }
 

@@ -17,10 +17,7 @@ final class UserService {
                 }
             }
             .responseDecodable(of: UserRootResponse.self, queue: .main) { response in
-                guard let twitterUser = response.value, twitterUser.errors == nil else {
-                    print("Error fetching Twitter user")
-                    return
-                }
+                guard let twitterUser = response.value else { return }
                 completion(twitterUser.data ?? TwitterUser(), twitterUser.errors ?? [UserFetchErrors()])
             }
     }

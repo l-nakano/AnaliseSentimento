@@ -26,12 +26,16 @@ struct UserTwittsView: View {
     }
     
     var userAndTwitts: some View {
-        VStack(spacing: 8) {
-            profile
-            countryAndDate
-            description
-            twittsList
-        }.frame(width: UIScreen.main.bounds.width * 0.9)
+        Color.init(UIColor(named: "UserTwittsColor")!)
+            .ignoresSafeArea()
+            .overlay(
+                VStack(spacing: 8) {
+                    profile
+                    countryAndDate
+                    description
+                    twittsList
+                }.frame(width: UIScreen.main.bounds.width * 0.9)
+            )
     }
     
     var profile: some View {
@@ -39,6 +43,7 @@ struct UserTwittsView: View {
             HStack {
                 Image(uiImage: twittsViewModel.userProfileImage)
                     .resizable()
+                    .clipShape(Circle())
                     .frame(width: UIScreen.main.bounds.width * 0.2, height: UIScreen.main.bounds.width * 0.2)
                 Text(twittsViewModel.twitterUser.name)
                     .font(.largeTitle)
@@ -70,13 +75,17 @@ struct UserTwittsView: View {
     }
     
     var twittsList: some View {
-        List(twittsViewModel.userTwitts) { twitt in
-            HStack {
-                Text(twitt.text)
-                Spacer()
-                Text(String(twitt.getSentimentScore()))
+        VStack {
+            Text("Veja os últimos twitts deste usuário!")
+                .padding(.top, 20)
+            List(twittsViewModel.userTwitts) { twitt in
+                HStack {
+                    Text(twitt.text)
+                    Spacer()
+                    Text(String(twitt.getSentimentScore()))
+                }
             }
-        }.padding(.top, 20)
+        }
     }
     
     func addTextWithImage(systemName: String, text: String?) -> some View {
