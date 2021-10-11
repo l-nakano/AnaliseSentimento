@@ -41,7 +41,7 @@ struct FindUserView: View {
     }
     
     var description: some View {
-        Text("Descubra qual o sentimento dos posts dos usuário do Twitter")
+        Text("Descubra qual o sentimento dos posts dos usuários do Twitter")
             .font(.title3)
             .italic()
             .multilineTextAlignment(.center)
