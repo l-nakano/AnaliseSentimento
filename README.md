@@ -8,7 +8,7 @@ App conta com duas telas, uma na qual o usuário realizará a busca de um userna
 Para a criação do app AnaliseSentimento foram consideradas as seguintes soluções:
 
 ## Extração de Dados
-Os dados utilizados neste app foram extraídos da API do Twitter.
+Os dados utilizados neste app foram extraídos da API REST do Twitter (https://developer.twitter.com).
 Para a execução desta tarefa, foi utilizado o Pod Alamofire, a fim de facilitar na extração, validação e decodificação dos dados para as estruturas adotadas no programa.
 
 ## Arquitetura
