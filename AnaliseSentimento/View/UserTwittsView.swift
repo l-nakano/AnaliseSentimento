@@ -4,7 +4,7 @@ struct UserTwittsView: View {
     @ObservedObject var twittsViewModel: TwittsViewModel
     
     var body: some View {
-        HStack {
+        Group {
             if twittsViewModel.userTwitts.count == 0 {
                 Text("Usuário sem twitts recentes!")
                     .foregroundColor(.gray)
