@@ -3,7 +3,7 @@ import SwiftUI
 
 final class UserService {
     func fetchUser(_ user: String, completion: @escaping (TwitterUser, [UserFetchErrors]) -> Void) {
-        let endpoint = UserEndpoint.fromUser(user, createdAt: true, location: true, description: true)
+        let endpoint = TwitterEndpoint.twitterUser(user)
         let url = endpoint.url
         let headers = endpoint.headers
         AF.request(url, headers: headers)
