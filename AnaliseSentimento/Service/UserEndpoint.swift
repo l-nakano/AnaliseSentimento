@@ -15,7 +15,8 @@ extension UserEndpoint {
     }
     
     var headers: HTTPHeaders {
-        return ["Authorization": ProcessInfo.processInfo.environment["BEARER_TOKEN"]!]
+        let apiToken = Bundle.main.infoDictionary?["BEARER_TOKEN"] as? String
+        return ["Authorization": "Bearer \(apiToken!)"]
     }
     
     static func fromUser(_ user: String, createdAt: Bool = false, location: Bool = false, description: Bool = false) -> Self {
