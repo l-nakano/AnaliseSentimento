@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		490B79A5271F6B05008D9452 /* TwitterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B79A4271F6B05008D9452 /* TwitterEndpoint.swift */; };
+		490B79BD271F8F01008D9452 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B79BC271F8F01008D9452 /* NetworkMonitor.swift */; };
 		49336FC22714AA6200FCBB8B /* UsernameValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49336FC12714AA6200FCBB8B /* UsernameValidation.swift */; };
 		4942352F2711DBB20068B345 /* TwittsRootData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942352E2711DBB20068B345 /* TwittsRootData.swift */; };
 		494235312711E4390068B345 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494235302711E4390068B345 /* UserService.swift */; };
@@ -52,6 +53,7 @@
 		0E6E497DC5386CDD99E96C81 /* Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AnaliseSentimento-AnaliseSentimentoUITests/Pods-AnaliseSentimento-AnaliseSentimentoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		154BEBE132158187202AFD37 /* Pods_AnaliseSentimentoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnaliseSentimentoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		490B79A4271F6B05008D9452 /* TwitterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterEndpoint.swift; sourceTree = "<group>"; };
+		490B79BC271F8F01008D9452 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		49211813271E30DA00DDD343 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		49211814271E310C00DDD343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49336FC12714AA6200FCBB8B /* UsernameValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameValidation.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490B79BB271F8EF0008D9452 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				490B79BC271F8F01008D9452 /* NetworkMonitor.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		494235352711E4A60068B345 /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +158,7 @@
 				49F6CC262711115300F737B5 /* View */,
 				49F6CC252711114B00F737B5 /* View Model */,
 				49F6CC192710731200F737B5 /* Service */,
+				490B79BB271F8EF0008D9452 /* Support */,
 				49F6CC29271112A800F737B5 /* App */,
 				49F6CBF327106DBC00F737B5 /* Assets.xcassets */,
 				49F6CBF527106DBC00F737B5 /* Preview Content */,
@@ -503,6 +514,7 @@
 				494235312711E4390068B345 /* UserService.swift in Sources */,
 				4942352F2711DBB20068B345 /* TwittsRootData.swift in Sources */,
 				49F6CC1B2710732200F737B5 /* TwittsService.swift in Sources */,
+				490B79BD271F8F01008D9452 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
