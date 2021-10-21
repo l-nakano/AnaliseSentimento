@@ -3,7 +3,7 @@ import Alamofire
 
 struct TwitterEndpoint {
     var path: String
-    var queryItems: [URLQueryItem] = []
+    var queryItems: [URLQueryItem]
     
     static func twitterUser(_ user: String) -> Self {
         return  TwitterEndpoint(path: "/users/by/username/\(user)", queryItems: [URLQueryItem(name: "user.fields", value: "profile_image_url,created_at,location,description")])
