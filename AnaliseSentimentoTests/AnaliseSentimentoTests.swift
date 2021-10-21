@@ -10,6 +10,8 @@ class AnaliseSentimentoTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         sut = AF
+        
+        let mockTwitterUser = TwitterUser()
     }
 
     override func tearDownWithError() throws {
@@ -140,6 +142,27 @@ class AnaliseSentimentoTests: XCTestCase {
         
         // Então
         XCTAssertNotNil(userProfileImageData)
+    }
+    
+    func testDataConvertion() {
+        // Dado
+        let userService = UserService()
+        let expectation = expectation(description: "Completion handler invoked")
+        var twitterUser: TwitterUser?
+        var userFetchErrors: [UserFetchErrors]?
+        
+        // Quando
+        userService.fetchUser("Twitter") { user, fetchErrors in
+            twitterUser = user
+            userFetchErrors = fetchErrors
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5)
+        
+        //Então
+        XCTAssertEqual(userFetchErrors?.count, 1)
+        XCTAssertEqual(userFetchErrors?.first?.title, "")
+        XCTAssertEqual(twitterUser?.formattedDate(), "20/02/2007")
     }
 
 }
